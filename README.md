@@ -10,9 +10,9 @@ Implementing load balancer in nginx server using docker containers.
 * Now comes NGINX into the picture because it helps to manage servers by acting as a reverse proxy
 * Reverse Proxy provides - Load balancing, Caching, TLS Setup etc. 
 <br/>
-**NOTE** : nginx will load all files in /opt/homebrew/etc/nginx/servers/
+NOTE : nginx will load all files in /opt/homebrew/etc/nginx/servers/
 <br/>
-<br/>
+
 ## How to use NGINX for serving content ?
 
 Static Content : 
