@@ -14,12 +14,7 @@ jobs:
         id: pr
         run: |
           PR_NUMBER=$(gh pr view --json number -q .number || echo "")
+          echo "PR_NUMBER=${PR_NUMBER}" >> $GITHUB_OUTPUT
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - run: echo PR Number = ${{ steps.pr.outputs.PR_NUMBER }}
-
-  pull-request:
-    runs-on: ubuntu-latest
-    if: ${{ github.event_name == 'pull_request' }}
-    steps:
-      - run: echo ${{ github.event.number }}
